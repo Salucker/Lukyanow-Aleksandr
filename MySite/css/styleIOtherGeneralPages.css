@@ -1,0 +1,326 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-family: 'Roboto',  'Arial', sans-serif;
+	font-size: 1em;
+}
+
+body {
+	background-color: rgb(236, 236, 236);
+}
+ /*Стили для навигационного меню*/
+
+header {
+	width: 100%;
+	margin-top: 1.5%; 
+}
+
+header nav {
+	display: flex;
+	flex-wrap: wrap;
+	height: 80px;
+	background-color: rgb(255, 255, 255); 
+} 
+
+header nav .burger-section {
+	display: none;
+}
+
+header nav .logo {
+	width: 15%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+header nav .logo img {
+	width: auto;
+	height: 100%;
+}
+
+header nav .nav-menu {
+	width: 85%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+header nav .nav-menu li {
+	list-style: none;
+	text-align: center;
+	padding: 10px;
+	font-size: 1.2em;
+}
+
+header nav .nav-menu li:last-of-type {
+	margin-left: auto; 
+}
+
+header nav .nav-menu li a {
+	text-decoration: none;
+	color: #000;
+}
+
+header nav .burger-section {
+	width: 50%;
+	display: none;
+	justify-content: right;
+}
+
+header nav .burger-section .menu-btn {
+	display: block;
+	height: 50px;
+	width: 70px;
+	position: relative;
+	margin-left: auto; 
+}
+
+header nav .burger-section .menu-btn span,
+header nav .burger-section .menu-btn span::before,
+header nav .burger-section .menu-btn span::after {
+	position: absolute;
+	width: 50px;
+	height: 2px;
+	top: 50%; margin-top: -1px; 
+	left: 50%; margin-left: -25px; 
+	background-color: #222;
+}
+
+header nav .burger-section .menu-btn span::before, 
+header nav .burger-section .menu-btn span::after {
+	content: '';
+	transition: 0.5s;
+}
+
+header nav .burger-section .menu-btn span::before {
+	transform: translateY(-13px);
+}
+
+header nav .burger-section .menu-btn span::after {
+	transform: translateY(13px);
+}
+
+header nav .burger-section .menu-btn-active span {
+	height: 0;
+}
+
+header nav .burger-section .menu-btn-active span::before {
+	transform: rotate(45deg);
+}
+
+header nav .burger-section .menu-btn-active span::after {
+	transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 868px) {
+	
+	header nav {
+		height: 50px;
+		display: flex;
+		flex-wrap: nowrap;
+	}
+
+	header nav .logo {
+		width: 50%;
+	}
+
+	header nav .nav-menu {
+		position: absolute;
+		display: none;
+		top: 50px;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(255, 255, 255);
+	}
+
+	header nav .nav-menu li:last-child {
+		margin-top: 100%;  
+	}
+
+	header nav .burger-section {
+		display: flex;
+	}
+}
+
+/*Стили для баннера*/
+header .main-banner {
+	display: flex;
+	width: 80%;
+	margin: 2% auto;
+	max-width: 1200px;
+	max-height: 400px;
+}
+
+.banner-text {
+	width: 50%;
+}
+
+.text-container {
+	padding: 20px;
+	color: rgb(58, 44, 68);
+}
+
+.text-container h2{
+	font-size: 4em;
+	font-weight: bold;
+}
+
+.text-container p{
+	font-size: 1em;
+	padding-bottom: 20px; 
+}
+
+header .main-banner .banner-img {
+	width: 50%;
+}
+
+.banner-container {
+	width: 100%;
+	height: 100%;
+}
+
+.banner-container img {
+	display: block;
+	height: inherit;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 868px) {
+	.banner-container {
+		display: none;
+	}
+
+	header .main-banner {
+		min-height: 250px;
+	}
+
+	.banner-text {
+		width: 100%;
+	}
+
+	.banner-text .text-container h2{
+		font-size: 3em;
+	}
+}
+
+main {
+	width: 100%;
+}
+
+main .block-container {
+	width: 80%;
+	max-width: 1200px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	padding: 50px;
+}
+
+main .block-container .column {
+	width: 23%;
+	padding: 20px;
+	box-sizing: border-box;
+	text-align: center;
+	background-color: rgb(53, 45, 112);
+	color: #fff;
+	margin-top: 2%;
+	flex-grow: 1;
+}
+
+main .block-container .column:not(even) {
+	margin-left: 2%;
+}
+
+main .block-container .column .text-content .content {
+	height: 58px;
+}
+
+main .block-container .column .text-content .descript {
+	height: 80px;
+}
+
+main .block-container .column .text-content .fndn {
+	height: 90px;
+}
+
+.content,
+.fndn {
+	font-weight: bold;
+}
+
+.fndn {
+	font-size: 1.5em;
+}
+
+main .block-container .column .btn-chose {
+	border-radius: 4px;
+	color: #fff;
+	background-color: rgb(95, 76, 180);
+	font-size: 0.8em;
+	border: unset;
+	cursor: pointer;
+	width: 100%;
+	text-align: center;
+	height: 40px;
+}
+
+@media screen and (max-width: 868px) {
+	main .block-container .column {
+		width: 48%;
+		margin-top: 3%;
+	}
+
+	main .block-container .column:not(even) {
+		margin-left: 0;
+	}
+	
+	main .block-container .column:nth-child(even) {
+		margin-left: 2%;
+	}
+
+	main .block-container .column .text-content .descript {
+		height: 100px;
+	}
+}
+
+/*Стили для футера*/
+footer {
+	background-color: rgb(255, 255, 255);
+}
+footer .foot-container {
+	display: flex;
+	height: 80px;
+	align-items: center;
+}
+
+footer .foot-container .logo {
+	width: 15%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+footer .foot-container .logo img {
+	width: auto;
+	height: 100%;
+}
+
+footer .foot-container .copiright span:last-child {
+	padding-left: 40px;
+}
+
+@media screen and (max-width: 868px) {
+	footer .foot-container {
+		height: 50px;
+	}
+
+	footer .foot-container .logo {
+		width: 45%;
+	}
+
+	footer .foot-container .copiright span:last-child {
+		padding-left: 20px; 
+	}
+}

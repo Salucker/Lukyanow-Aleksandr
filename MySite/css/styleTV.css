@@ -1,0 +1,7 @@
+main .block-container .column {
+	background-color: rgb(52, 76, 111);
+}
+
+main .block-container .column .btn-chose {
+	background-color: rgb(103, 147, 153);
+}
